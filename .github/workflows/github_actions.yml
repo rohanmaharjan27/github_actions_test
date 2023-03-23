@@ -25,7 +25,7 @@ jobs:
 
       -run: cat README.md
 
-  checkout_test:
+  checkout_test_main:
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout code
