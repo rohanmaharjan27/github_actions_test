@@ -4,5 +4,7 @@ on:
   workflow_dispatch
 
 jobs:
-  echo:
-    echo "Test"
+  deploy-to-test:
+    runs-on: ubuntu-20.04
+    steps:
+      - run: echo "test" 
