@@ -2,10 +2,11 @@ name: GitHub Actions Test
 run-name: CI/CD pipeline running on GitHub Actions
 on: 
   workflow_dispatch:
-    branch:
-    description: 'Branch to be deployed'
-    required: true
-    default: github.ref_name
+    inputs:
+      branch:
+        description: 'Branch to be deployed'
+        required: true
+        default: github.ref_name
 
 jobs:
   deploy-to-test:
