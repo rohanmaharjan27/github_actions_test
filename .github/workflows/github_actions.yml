@@ -1,17 +1,10 @@
 name: GitHub Actions Test
 run-name: CI/CD pipeline running on GitHub Actions
 on: 
-  workflow_dispatch:
-    inputs:
-      branch:
-        description: 'Branch to be deployed'
-        required: true
-        default: $GITHUB_REF_NAME
+  workflow_dispatch
 
 jobs:
-  deploy-to-test:
+  workflow_test:
     runs-on: ubuntu-20.04
-    env:
-      BRANCH: ${{ github.event.inputs.branch }}
     steps:
-      - run: echo "$BRANCH"
+      - run: echo $GITHUB_REF_NAME
